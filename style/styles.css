@@ -11,11 +11,15 @@ background-color: #F3F1FF;
 main{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .container{
     background-color: #FFFFFF;
     width: 870px;
     padding: 30px;
+    margin-top: 21px;
+    border-radius: 5px;
 }
 /* top-Players section */
 .top-players{
@@ -46,4 +50,106 @@ main{
 }
 hr{
     border: 1px solid #D1D1D1;
+    margin-bottom: 27px;
+}
+
+/* top blog styles */
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+.blog{
+    display: flex;
+}
+.blog .thumbnail img{
+    height: 117px;
+    width: 177px;
+}
+.blog-info{
+    margin-left: 16px;
+}
+.blog-title{
+    font-size: 20px;
+
+}
+.blog-author{
+    font-size: 16px;
+
+}
+.blog-author a{
+    text-decoration: none;
+    color: #562EFF;
+}
+
+/* courses style */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course{
+    width: 252px;
+}
+
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: gold;
+}
+.fa-star.empty{
+    color: gray;
+}
+.course-duration{
+    color: rgb(221, 14, 14);
+    background-color: rgba(165, 104, 104, 0.514);
+    border-radius: 3px;
+}
+
+/* Media Query */
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        background-color: salmon;
+    }
+    .player, .blog, .course {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+}
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .container{ 
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: sandybrown;
+    }
+    .courses{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        background-color: sandybrown;
+    }
+    .player, .blog{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
